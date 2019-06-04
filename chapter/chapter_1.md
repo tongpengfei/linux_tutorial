@@ -46,10 +46,19 @@ linux有很多版本，各linux版本的使用差异不大，学会一个其他�
 ![step28](../image/virtualbox/virtualbox_28.png)
 ![step29](../image/virtualbox/virtualbox_29.png)
 
-### 关闭虚拟机
+### ubuntu关机
+在终端输入命令sudo halt关机,sudo表示用管理员权限执行命令halt
+``` c
+tpf@tpf-ubuntu:~$ sudo reboot
+```
+![halt](../image/virtualbox/shutdown/halt.png)
 
-
-### 重启虚拟机
+### 重启ubuntu
+在终端输入命令sudo reboot重启ubuntu
+``` c
+tpf@tpf-ubuntu:~$ sudo reboot
+```
+![reboot](../image/virtualbox/shutdown/reboot.png)
 
 
 ### 设置虚拟机的共享文件夹
