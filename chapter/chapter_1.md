@@ -12,7 +12,7 @@ VirtualBox是个开源的虚拟机软件，另一个常用的是VMware。Virtual
 linux有很多版本，各linux版本的使用差异不大，学会一个其他的就很容易上手了，做为入门，咱们选择ubuntu，ubuntu本身也有很多版本，可以下载最新的LTS(LTS = Long-Term Support,长期技术支持)版本即可。首先到[Ubuntu官网](https://www.ubuntu.com/download/desktop)上[下载](http://mirrors.njupt.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso)系统镜像文件,后面安装系统时候需要用到。 
 
 ### 安装VirtualBox
-![第一步](image/virtualbox/virtualbox_0.png)
+![第一步](../image/virtualbox/virtualbox_0.png)
 
 ### 安装Ubuntu虚拟机
 
