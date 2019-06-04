@@ -12,10 +12,39 @@ VirtualBox是个开源的虚拟机软件，另一个常用的是VMware。Virtual
 linux有很多版本，各linux版本的使用差异不大，学会一个其他的就很容易上手了，做为入门，咱们选择ubuntu，ubuntu本身也有很多版本，可以下载最新的LTS(LTS = Long-Term Support,长期技术支持)版本即可。首先到[Ubuntu官网](https://www.ubuntu.com/download/desktop)上[下载](http://mirrors.njupt.edu.cn/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso)系统镜像文件,后面安装系统时候需要用到。 
 
 ### 安装VirtualBox
-![第一步](../image/virtualbox/virtualbox_0.png)
+和安装一般exe一样,略
 
 ### 安装Ubuntu虚拟机
-
+![step0](../image/virtualbox/virtualbox_0.png)
+![step1](../image/virtualbox/virtualbox_1.png)
+![step2](../image/virtualbox/virtualbox_2.png)
+![step3](../image/virtualbox/virtualbox_3.png)
+![step4](../image/virtualbox/virtualbox_4.png)
+![step5](../image/virtualbox/virtualbox_5.png)
+![step6](../image/virtualbox/virtualbox_6.png)
+![step7](../image/virtualbox/virtualbox_7.png)
+![step8](../image/virtualbox/virtualbox_8.png)
+![step9](../image/virtualbox/virtualbox_9.png)
+![step10](../image/virtualbox/virtualbox_10.png)
+![step11](../image/virtualbox/virtualbox_11.png)
+![step12](../image/virtualbox/virtualbox_12.png)
+![step13](../image/virtualbox/virtualbox_13.png)
+![step14](../image/virtualbox/virtualbox_14.png)
+![step15](../image/virtualbox/virtualbox_15.png)
+![step16](../image/virtualbox/virtualbox_16.png)
+![step17](../image/virtualbox/virtualbox_17.png)
+![step18](../image/virtualbox/virtualbox_18.png)
+![step19](../image/virtualbox/virtualbox_19.png)
+![step20](../image/virtualbox/virtualbox_20.png)
+![step21](../image/virtualbox/virtualbox_21.png)
+![step22](../image/virtualbox/virtualbox_22.png)
+![step23](../image/virtualbox/virtualbox_23.png)
+![step24](../image/virtualbox/virtualbox_24.png)
+![step25](../image/virtualbox/virtualbox_25.png)
+![step26](../image/virtualbox/virtualbox_26.png)
+![step27](../image/virtualbox/virtualbox_27.png)
+![step28](../image/virtualbox/virtualbox_28.png)
+![step29](../image/virtualbox/virtualbox_29.png)
 
 ### 关闭虚拟机
 
