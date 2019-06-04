@@ -49,7 +49,7 @@ linux有很多版本，各linux版本的使用差异不大，学会一个其他�
 ### ubuntu关机
 在终端输入命令sudo halt关机,sudo表示用管理员权限执行命令halt
 ``` c
-tpf@tpf-ubuntu:~$ sudo reboot
+tpf@tpf-ubuntu:~$ sudo halt
 ```
 ![halt](../image/virtualbox/shutdown/halt.png)
 
