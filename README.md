@@ -9,3 +9,7 @@
 ## [1.使用VirtualBox在Windows下安装Ubuntu虚拟机](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_1.md)
 ## [2.熟悉linux常用命令](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_2.md)
 ## [3.编写shell脚本](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_3.md)
+## [4.远程登录和远程拷贝](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_4.md)
+## [5.使用vim编写程序](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_5.md)
+## [6.编写Makefile文件](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_6.md)
+## [7.使用gdb调试程序](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_7.md)
