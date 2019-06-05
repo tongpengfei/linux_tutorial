@@ -781,9 +781,42 @@ $3 = 55
 ```
 
 #### 附加到已运行的程序
-如果程序已经在运行的时候我们想用gdb附加到程序上调试，可以用gdb attach 进程号
+如果程序已经在运行的时候我们想用gdb附加到程序上调试，可以用gdb attach 进程号  
+
 先用ps看一下程序的进程号
 ``` c
-bash$ ps 
+bash$ ps -ef | grep main
+# 5762 是main运行后的进程号
+dafei      5762  3139  0 08:40 pts/0    00:00:00 ./main
 ```
 
+把gdb附加到该进程上  
+``` c 
+bash$ gdb attach 5762
+
+# 下面是gdb附加时候的输出
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+attach: No such file or directory.
+Attaching to process 5762
+Reading symbols from /home/dafei/cpp/test/main...done.
+Reading symbols from /lib/x86_64-linux-gnu/libc.so.6...Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/libc-2.23.so...done.
+done.
+Reading symbols from /lib64/ld-linux-x86-64.so.2...Reading symbols from /usr/lib/debug//lib/x86_64-linux-gnu/ld-2.23.so...done.
+done.
+0x00007fe964c47260 in __read_nocancel () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+(gdb) #现在就可以下断点了
+```
