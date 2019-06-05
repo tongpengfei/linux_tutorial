@@ -8,3 +8,4 @@
 
 ## [1.使用VirtualBox在Windows下安装Ubuntu虚拟机](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_1.md)
 ## [2.熟悉linux常用命令](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_2.md)
+## [3.编写shell脚本](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_3.md)
