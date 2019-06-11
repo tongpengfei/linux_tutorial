@@ -13,5 +13,5 @@
 ## [5.使用vim编写程序](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_5.md)
 ## [6.编写Makefile文件](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_6.md)
 ## [7.使用gdb调试程序](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_7.md)
-## [8.TODO 使用cgdb为gdb插上翅膀](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_8.md)
+## [8.使用cgdb为gdb插上翅膀](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_8.md)
 ## [9.TODO 程序崩溃之后的排错及定位](https://github.com/tongpengfei/linux_tutorial/blob/master/chapter/chapter_9.md)
