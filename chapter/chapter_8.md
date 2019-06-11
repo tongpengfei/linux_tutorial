@@ -23,7 +23,7 @@ tty窗口可以显示程序输出,也可以在这里输入参数
 按esc后,再按 i 可以把焦点切到gdb窗口上
 
 ## 调整TTY窗口大小
--或+号会放大或缩小TTY窗口   
+shift+-或shift+=会放大或缩小TTY窗口   
 ![cgdb_shift_t](../image/cgdb/cgdb_shift_t.gif)
 
 
