@@ -1,7 +1,7 @@
 # linux编程入门(九)-程序崩溃之后的排错及定位
 [toc]
 
-当我们写程序时候难免会因为各种问题崩掉,如果是开发阶段,我们可以开gdb跟踪调试,但如果到了线上,就不能用gdb了,这时候我们可以把崩溃时候的堆栈信息打印出来,然后定位到具体崩溃的代码位置.  
+当我们写程序时候难免会因为各种问题崩掉,如果是开发阶段,我们可以开gdb跟踪调试,但如果到了线上,就不能用gdb了,这时候我们可以把崩溃时候的调用栈信息打印出来,然后定位到具体崩溃的代码位置.  
 想要定位到具体的行号,需要在编译的时候加入-g参数,表示编译时候加入调试信息,调试信息里有相关的信息可以使地址变位到行号.
 下面介绍几个可以定位到崩溃位置的方法:
 
@@ -103,7 +103,7 @@ Program terminated with signal SIGFPE, Arithmetic exception.
 上面说的ulimit -c unlimited这种方法在重启机器后就会失效,想永久打开生成core,需要修改些配置,这里大家可以下去自己研究一下,后面我们就说一下,假如没有core文件的时候,我们该怎么办.
 
 
-## 在代码崩溃的时候把堆栈打印出来  
+## 在代码崩溃的时候把调用栈打印出来  
 core文件其实是靠不住的,因为core文件是程序的内存数据,当程序特别大的时候core文件就特别大,如果机器磁盘已经快满了,再想生成core文件就生不成了,这时候我们可以自己在程序里把程序崩溃时候的关键信息打印出来,就不需要太依赖core文件了  
 好,自己动手,丰衣足食.
 
@@ -200,7 +200,7 @@ int main(int argc, char *argv[]) {
     int pid = getpid();
     printf("pid %d\n", pid);
 #if 0
-    //这里是man手册里backtrace的测试代码,直接打印堆栈
+    //这里是man手册里backtrace的测试代码,直接打印调用栈
     if (argc != 2) {
         fprintf(stderr, "%s num-calls\n", argv[0]);
         exit(EXIT_FAILURE);
@@ -210,7 +210,7 @@ int main(int argc, char *argv[]) {
     exit(EXIT_SUCCESS);
 #else
     //这里是先注册信号，当程序运行出错的时候，
-    //捕捉到信号后打印堆栈，
+    //捕捉到信号后打印调用栈，
     //实际使用中也是这种办法
     signal(SIGSEGV, dump_backtrace); //segmentation violation
     signal(SIGABRT, dump_backtrace); //abort program (formerly SIGIOT)
@@ -273,7 +273,7 @@ clean:
 ```
 
 
-上面的大多数代码都是从man backtrace里扒出来的,但是man手册里的代码是调用程序就直接打印调用栈了,和我们的需求不符,我们希望在程序崩溃的时候再打印,那就得改一下,程序崩溃的时候会触发一些相应的信号,我们只要在程序里捕捉到这些信号,然后在收到信号的时候再打印堆栈就可以了.  
+上面的大多数代码都是从man backtrace里扒出来的,但是man手册里的代码是调用程序就直接打印调用栈了,和我们的需求不符,我们希望在程序崩溃的时候再打印,那就得改一下,程序崩溃的时候会触发一些相应的信号,我们只要在程序里捕捉到这些信号,然后在收到信号的时候再打印调用栈就可以了.  
 下面我们看看捕捉信号这几行代码
 ``` c
 # 这部分代码里加了注释,下面的signal意思是注册一个信号,当发生该信号时,回调后面的函数,
@@ -282,7 +282,7 @@ clean:
 # SIGABRT是当程序用了abort()或者assert之类的函数时候会触发
 # SIGFPE也就是除0时候发生的了
     //这里是先注册信号，当程序运行出错的时候，
-    //捕捉到信号后打印堆栈，
+    //捕捉到信号后打印调用栈，
     //实际使用中也是这种办法
     signal(SIGSEGV, dump_backtrace); //segmentation violation
     signal(SIGABRT, dump_backtrace); //abort program (formerly SIGIOT)
